@@ -32,6 +32,8 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
         //Eric
         Author eric = new Author("Eric", "Evans");
         Book  ddd = new Book("Domain Driven Design", "1234", "Harper Collins");
+
+        // Jointure : l'auteur "eric" a un book "ddd" et book "ddd" a un auteur "eric".
         eric.getBooks().add(ddd);
         ddd.getAuthors().add(eric);
 
